@@ -6,7 +6,7 @@ menu ()
 {
 
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Proxy Auth Panel" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "แผงการรับรองพร็อกซี่" ; tput sgr0 ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "|1|"; tput setaf 6 ; printf '%s' " Disable" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Desabilitara a autenticacao por Proxy" ; tput sgr0 ;
 tput setaf 2 ; tput bold ; printf '%s' "|2|"; tput setaf 6 ; printf '%s' " Enable" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Habilitara a autenticacao por Proxy" ; tput sgr0 ;
 tput setaf 2 ; tput bold ; printf '%s' "|0|"; tput setaf 6 ; printf '%s' " Sair" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Simplesmente voltara para o menu" ; tput sgr0 ;
@@ -54,7 +54,7 @@ cache deny all\n
 http_access deny all\n
 http_port 80\n
 http_port 3128\n
-visible_hostname penguin\n
+visible_hostname VIP.ไอ้เหี้ยไอ้สัสเย็ดเป็ดเย็ดไก่(WY.ม้าอาชา)\n
 forwarded_for off\nvia off\n" > squid.conf
 service squid3 restart
 clear
