@@ -6,7 +6,7 @@ menu ()
 {
 
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Proxy Auth Panel" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "แผงการรับรองพร็อกซี่" ; tput sgr0 ; echo ""
 tput setaf 2 ; tput bold ; printf '%s' "|1|"; tput setaf 6 ; printf '%s' " Disable" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Desabilitara a autenticacao por Proxy" ; tput sgr0 ;
 tput setaf 2 ; tput bold ; printf '%s' "|2|"; tput setaf 6 ; printf '%s' " Enable" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Habilitara a autenticacao por Proxy" ; tput sgr0 ;
 tput setaf 2 ; tput bold ; printf '%s' "|0|"; tput setaf 6 ; printf '%s' " Sair" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Simplesmente voltara para o menu" ; tput sgr0 ;
@@ -17,8 +17,8 @@ read  opcao
 case $opcao in
 	1) limiteron ;;
 	2) limiteroff ;;
-	3) reinstall ;;
-	0) exit ;;
+	3) ติดตั้ง ;;
+	0) ทางออก ;;
 esac
 
 }
@@ -54,11 +54,13 @@ cache deny all\n
 http_access deny all\n
 http_port 80\n
 http_port 3128\n
-visible_hostname penguin\n
+http_port 8080\n
+http_port 8000\n
+visible_hostname VIPไอ้เหี้ยไอ้สัสเย็ดเป็ดเย็ดไก่(WY.ม้าอาชา)\n
 forwarded_for off\nvia off\n" > squid.conf
 service squid restart
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Proxy Auth OFFILINE" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Proxy Auth ออฟไลน์" ; tput sgr0 ; echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Nao e mais necessario autenticacao proxy" ; tput sgr0 ; echo ""
 }
 
@@ -72,7 +74,7 @@ mv squid.conf squid.confbak
 mv squid.confauth squid.conf
 service squid restart
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Proxy Auth Online" ; tput sgr0 ; echo ""
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "พร็อกซี่ Auth Online" ; tput sgr0 ; echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Necessario autenticacao PROXY" ; tput sgr0 ; echo ""
 }
 menu
