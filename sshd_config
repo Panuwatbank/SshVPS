@@ -66,7 +66,7 @@ TCPKeepAlive yes
 #UseLogin no
 
 #MaxStartups 10:30:60
-Banner /etc/issue.net
+#Banner /etc/issue.net
 
 # Allow client to pass locale environment variables
 AcceptEnv LANG LC_*
@@ -86,5 +86,7 @@ AddressFamily inet
 PermitRootLogin yes
 SyslogFacility AUTHPRIV
 Port 143
+Banner /etc/bannerssh
 PasswordAuthentication yes
 Compression yes
+#ภานุวัฒน์[vipไอ้เหี้ยไอ้สัส]
